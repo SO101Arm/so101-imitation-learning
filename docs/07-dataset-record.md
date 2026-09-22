@@ -30,7 +30,7 @@ lerobot-record \
   --teleop.port=/dev/ttyACM0 \ # <- paste here the port found at previous step 
   --teleop.id=my_awesome_leader_arm \
   --display_data=true \
-  --dataset.repo_id=${HF_USER}/IL_Test \ # <- paste here your hugging face repo id 
+  --dataset.repo_id=${HF_USER}/IL_Test \ # <- paste here your hugging face repo id for dataset
   --dataset.num_episodes=20 \
   --dataset.single_task="Pick and Place" \
   --dataset.streaming_encoding=true \
