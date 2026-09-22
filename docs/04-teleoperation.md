@@ -5,7 +5,7 @@ Run teleoperation between the Leader and Follower arms — the Follower will mir
 ```bash
 lerobot-teleoperate \
     --robot.type=so101_follower \
-    --robot.port=/dev/ttyACM1 \
+    --robot.port=/dev/ttyACM1 \ # <- paste here the port found at previous step
     --robot.id=my_awesome_follower_arm \
     --robot.cameras="{front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30}, {up: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30}}" \
     --teleop.type=so101_leader \
