@@ -1,0 +1,25 @@
+# Editors
+.vscode/
+.idea/
+*.swp
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# LeRobot outputs
+outputs/
+wandb/
+*.mp4
+*.parquet
+
+# Local caches
+~/.cache/
