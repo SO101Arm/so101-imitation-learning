@@ -8,8 +8,8 @@ Common causes when the recording or teleoperation script fails to open the arms:
 - Missing serial permissions. Re‑apply:
 
   ```bash
-  sudo chmod 666 /dev/ttyACM0
-  sudo chmod 666 /dev/ttyACM1
+  sudo chmod 666 /dev/ttyACM0 # <- paste here the port found at previous step
+  sudo chmod 666 /dev/ttyACM1 # <- paste here the port found at previous step
   ```
 - Bus Servo Adapter power cable unplugged — USB alone does **not** power the servos.
 - Cameras occupied by another process (browser tab, other terminal). Close them or pick a different `index_or_path`.
