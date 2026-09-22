@@ -23,14 +23,14 @@ Then start recording:
 ```bash
 lerobot-record \
   --robot.type=so101_follower \
-  --robot.port=/dev/ttyACM1 \
+  --robot.port=/dev/ttyACM1 \ # <- paste here the port found at previous step
   --robot.id=my_awesome_follower_arm \
-  --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30}, { up: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30}}" \
+  --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30}, { up: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30}}" \ # <- paste here the camera information found at previous step
   --teleop.type=so101_leader \
-  --teleop.port=/dev/ttyACM0 \
+  --teleop.port=/dev/ttyACM0 \ # <- paste here the port found at previous step 
   --teleop.id=my_awesome_leader_arm \
   --display_data=true \
-  --dataset.repo_id=${HF_USER}/IL_Test \
+  --dataset.repo_id=${HF_USER}/IL_Test \ # <- paste here your hugging face repo id 
   --dataset.num_episodes=20 \
   --dataset.single_task="Pick and Place" \
   --dataset.streaming_encoding=true \
@@ -89,15 +89,15 @@ Control the data recording flow using keyboard shortcuts:
 ```bash
 lerobot-record \
     --robot.type=so101_follower \
-    --robot.port=/dev/ttyACM1 \
+    --robot.port=/dev/ttyACM1 \ # <- paste here the port found at previous step
     --robot.id=my_awesome_follower_arm \
-    --robot.cameras="{front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30}, {up: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30}}" \
+    --robot.cameras="{front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30}, {up: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30}}" \ # <- paste here the camera information found at previous step
     --teleop.type=so101_leader \
-    --teleop.port=/dev/ttyACM0 \
+    --teleop.port=/dev/ttyACM0 \ # <- paste here the port found at previous step
     --teleop.id=my_awesome_leader_arm \
     --display_data=true \
-    --dataset.repo_id=${HF_USER}/IL_Test-20260915_104447 \
-    --dataset.root="/home/pai01/.cache/huggingface/lerobot/Thach12/IL_Test-20260915_104447" \
+    --dataset.repo_id=${HF_USER}/IL_Test-20260915_104447 \  # <- paste here your hugging face repo id
+    --dataset.root="/home/pai01/.cache/huggingface/lerobot/Thach12/IL_Test-20260915_104447" \ # <- paste here your hugging face root path
     --dataset.num_episodes=10 \
     --dataset.single_task="Pick and Place" \
     --dataset.streaming_encoding=true \
