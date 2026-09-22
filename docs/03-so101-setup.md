@@ -38,14 +38,14 @@ lerobot-find-port
 - When prompted with *"Remove the USB cable from your MotorBus and press Enter when done"*, disconnect the USB cable from one arm and press Enter.
 - The output will show the port of the disconnected MotorBus adapter.
 - Repeat the process for the other arm and record the corresponding ports, e.g.:
-  - **Leader** → `/dev/ttyACM0` # <- paste here the port found at previous step
-  - **Follower** → `/dev/ttyACM1`  # <- paste here the port found at previous step
+  - **Leader** → `/dev/ttyACM0`  <- paste here the port found at previous step
+  - **Follower** → `/dev/ttyACM1`   <- paste here the port found at previous step
 
 ## Give access to the ports
 
 ```bash
-sudo chmod 666 /dev/ttyACM0
-sudo chmod 666 /dev/ttyACM1
+sudo chmod 666 /dev/ttyACM0 # <- paste here the port found at previous step
+sudo chmod 666 /dev/ttyACM1 # <- paste here the port found at previous step
 ```
 
 ### Giving access to USB serial ports
