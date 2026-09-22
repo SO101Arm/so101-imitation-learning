@@ -4,13 +4,13 @@
 
 ```bash
 lerobot-train \
-  --dataset.repo_id=${HF_USER}/IL_Test-20260915_104447 \
+  --dataset.repo_id=${HF_USER}/IL_Test-20260915_104447 \ # <- paste here your hugging face repo id for dataset
   --policy.type=act \
-  --output_dir=outputs/train/act_IL_Test_20260915_104447 \
+  --output_dir=outputs/train/act_IL_Test_20260915_104447 \ # <- paste here the destination you want to save your data set in
   --job_name=act_so101_test \
   --policy.device=cuda \
   --wandb.enable=false \
-  --policy.repo_id=${HF_USER}/act_IL_Test_20260915_104447 \
+  --policy.repo_id=${HF_USER}/act_IL_Test_20260915_104447 \ # <- paste here your hugging face repo id for policy
   --save_checkpoint_to_hub=true \
   --steps=300
 ```
@@ -38,7 +38,7 @@ When the configured number of steps completes, LeRobot writes the final checkpoi
 
 ```bash
 lerobot-train \
-  --config_path=outputs/train/act_IL_Test_20260915_104447/checkpoints/last/pretrained_model/train_config.json \
+  --config_path=outputs/train/act_IL_Test_20260915_104447/checkpoints/last/pretrained_model/train_config.json \ # <- paste here your hugging face repo id for policy
   --resume=true
 ```
 
@@ -49,7 +49,7 @@ lerobot-train \
 
 ```bash
 lerobot-train \
-  --config_path=${HF_USER}/act_IL_Test_20260915_104447 \
+  --config_path=${HF_USER}/act_IL_Test_20260915_104447 \ paste here your hugging face repo id for dataset
   --resume=true
 ```
 
